@@ -18,12 +18,12 @@ const HeadingVariants = cva(
     },
   }
 );
-interface ParagraphProps
-  extends HTMLAttributes<HTMLParagraphElement>,
+interface HeadingProps
+  extends HTMLAttributes<HTMLHeadingElement>,
     VariantProps<typeof HeadingVariants> {}
 
 //foward ref
-const LargeHeading = forwardRef<HTMLParagraphElement, ParagraphProps>(
+const LargeHeading = forwardRef<HTMLHeadingElement, HeadingProps>(
   ({ className, children, size, ...props }, ref) => {
     return (
       <h1
